@@ -3,7 +3,7 @@ use core::error;
 use borsh::{BorshDeserialize, BorshSerialize};
 use solana_program::program_error::ProgramError;
 use solana_program::program_pack::{IsInitialized, Sealed};
-// use thiserror::Error;
+use thiserror::Error;
 
 #[derive(BorshDeserialize, BorshSerialize)]
 pub struct AccountState {
@@ -13,10 +13,7 @@ pub struct AccountState {
     pub title: String,
 }
 
-
-impl Sealed for AccountState{
-
-}
+impl Sealed for AccountState {}
 
 impl IsInitialized for AccountState {
     fn is_initialized(&self) -> bool {
@@ -24,9 +21,8 @@ impl IsInitialized for AccountState {
     }
 }
 
-
 #[derive(Debug, Error)]
-enum ReviewError{
+pub enum ReviewError {
     #[error("Account not initialized yet")]
     UninitializedAccount,
 
@@ -35,7 +31,6 @@ enum ReviewError{
 
     #[error("PDA Error")]
     InvalidPDA,
-
 }
 
 // Wraping customer error to actualu Solana program Error
