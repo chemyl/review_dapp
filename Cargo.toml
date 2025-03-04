@@ -1,3 +1,4 @@
+cargo-features = ["edition2024"]
 [package]
 name = "review_dapp"
 version = "0.1.0"
@@ -7,5 +8,3 @@ edition = "2024"
 borsh = "1.2.1"
 solana-program = "1.17.7"
 thiserror = "2"
-
-[dev-dependencies]

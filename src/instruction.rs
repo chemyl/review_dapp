@@ -1,5 +1,5 @@
 use borsh::{BorshDeserialize, BorshSerialize};
-use solana_program::{entrypoint::ProgramResult, program_error::ProgramError};
+use solana_program::program_error::ProgramError;
 
 pub enum ReviewInstruction {
     AddReview {
@@ -34,7 +34,7 @@ impl ReviewInstruction {
                 rating: payload.rating,
                 decription: payload.decription,
             },
-            1 => Self::AddReview {
+            1 => Self::UpdateReview {
                 tittle: payload.tittle,
                 rating: payload.rating,
                 decription: payload.decription,
