@@ -8,3 +8,6 @@ edition = "2024"
 borsh = "1.2.1"
 solana-program = "1.17.7"
 thiserror = "2"
+
+[lib]
+crate-type = ["cdylib", "lib"]
