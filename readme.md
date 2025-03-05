@@ -2,8 +2,8 @@
 Solana on-chain program allows you to leave and update reviews.
 
 ## **Technologies Used**
-![rust Version](https://img.shields.io/badge/rust-1.87.0-nightly%20-purple)
-![solana-program Version](https://img.shields.io/badge/solana-program-1.17.7%20-yellow)
+![rust Version](https://img.shields.io/badge/rust-nightly%20-purple)
+![solana-program Version](https://img.shields.io/badge/solana-1.17.7%20-blue)
 ![borsh Version](https://img.shields.io/badge/borsh-1.2.1%20-yellow)
 
 
