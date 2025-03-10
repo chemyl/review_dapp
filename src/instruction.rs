@@ -1,5 +1,7 @@
-use borsh::{BorshDeserialize, BorshSerialize};
+use borsh::BorshDeserialize;
 use solana_program::program_error::ProgramError;
+
+use crate::state::review_payload::ReviewPayload;
 
 pub enum ReviewInstruction {
     AddReview {
@@ -12,13 +14,6 @@ pub enum ReviewInstruction {
         rating: u8,
         decription: String,
     },
-}
-
-#[derive(BorshDeserialize, BorshSerialize)]
-struct ReviewPayload {
-    tittle: String,
-    rating: u8,
-    decription: String,
 }
 
 impl ReviewInstruction {

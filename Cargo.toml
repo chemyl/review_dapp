@@ -11,3 +11,8 @@ thiserror = "2"
 
 [lib]
 crate-type = ["cdylib", "lib"]
+
+[dev-dependencies]
+solana-program-test = "1.18.26"
+solana-sdk = "1.18.26"
+tokio = "1.44.0"
